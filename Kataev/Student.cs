@@ -19,14 +19,15 @@ namespace Student
         public string city;
         public int age;
         // Создаем конструктор
-        public Student(string firstName, string lastName, string university, string faculty, string department, int age, int course, int group, string city)
+        public Student(string firstName, string lastName, string university, string faculty, int age, string department,  int course, int group, string city)
         {
             this.lastName = lastName;
             this.firstName = firstName;
             this.university = university;
             this.faculty = faculty;
-            this.department = department;
             this.course = course;
+            this.department = department;
+            
             this.age = age;
             this.group = group;
             this.city = city;

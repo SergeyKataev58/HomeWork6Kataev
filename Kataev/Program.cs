@@ -39,10 +39,10 @@ namespace Student
                 {
                     string[] s = sr.ReadLine().Split(';');
                     // Добавляем в список новый экземпляр класса Student
-                    list.Add(new Student(s[0], s[1], s[2], s[3], s[4], int.Parse(s[5]), int.Parse(s[6]), int.Parse(s[7]), s[8]));
+                    list.Add(new Student(s[0], s[1], s[2], s[3], int.Parse(s[4]), s[5], int.Parse(s[6]), int.Parse(s[7]), s[8]));
                     // Одновременно подсчитываем количество магистров певрого и второго курсов
                     if (int.Parse(s[6]) == 5) magistr1++; else if (int.Parse(s[6]) == 6) magistr2++;
-                    if (int.Parse(s[5]) > 17 && int.Parse(s[5]) < 21)
+                    if (int.Parse(s[4]) > 17 && int.Parse(s[4]) < 21)
                     {
                         if (cousreFrequency.ContainsKey(int.Parse(s[6])))
                             cousreFrequency[int.Parse(s[6])] += 1;
