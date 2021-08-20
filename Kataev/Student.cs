@@ -28,8 +28,9 @@ namespace Student
             this.course = course;
             this.department = department;
             
-            this.age = age;
+            
             this.group = group;
+            this.age = age;
             this.city = city;
         }
     }

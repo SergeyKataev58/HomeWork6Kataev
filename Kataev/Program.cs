@@ -27,8 +27,8 @@ namespace Student
 
         static void Main(string[] args)
         {
-            int magistr1 = 0;
-            int magistr2 = 0;
+            int magistr5 = 0;
+            int magistr6 = 0;
             List<Student> list = new List<Student>();                             // Создаем список студентов
             DateTime dt = DateTime.Now;
             Dictionary<int, int> cousreFrequency = new Dictionary<int, int>();
@@ -40,9 +40,9 @@ namespace Student
                     string[] s = sr.ReadLine().Split(';');
                     // Добавляем в список новый экземпляр класса Student
                     list.Add(new Student(s[0], s[1], s[2], s[3], int.Parse(s[4]), s[5], int.Parse(s[6]), int.Parse(s[7]), s[8]));
-                    // Одновременно подсчитываем количество магистров певрого и второго курсов
-                    if (int.Parse(s[6]) == 5) magistr1++; else if (int.Parse(s[6]) == 6) magistr2++;
-                    if (int.Parse(s[4]) > 17 && int.Parse(s[4]) < 21)
+                    // Одновременно подсчитываем количество магистров пятого и шестого курсов
+                    if (int.Parse(s[6]) == 5) magistr5++; else if (int.Parse(s[6]) == 6) magistr6++;
+                    if (int.Parse(s[7]) > 17 && int.Parse(s[7]) < 21)
                     {
                         if (cousreFrequency.ContainsKey(int.Parse(s[6])))
                             cousreFrequency[int.Parse(s[6])] += 1;
@@ -60,8 +60,8 @@ namespace Student
             }
             sr.Close();
             Console.WriteLine("Всего студентов:" + list.Count);
-            Console.WriteLine("Магистров первого курса:{0}", magistr1);
-            Console.WriteLine("Магистров второго курса:{0}", magistr2);
+            Console.WriteLine("Магистров пятого курса:{0}", magistr5);
+            Console.WriteLine("Магистров шестого курса:{0}", magistr6);
             Console.WriteLine("\nПокажем сколько студентов в возрасте от 18 до 20 лет на каком курсе учатся.");
             ICollection<int> keys = cousreFrequency.Keys;
             String result = String.Format("{0,-10} {1,-10}\n", "Курс", "Количество студентов");
