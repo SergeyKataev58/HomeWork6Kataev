@@ -70,17 +70,17 @@ namespace Student
             foreach (int key in keys)
                 result += String.Format("{0,-10} {1,-10:N0}\n",
                                    key, cousreFrequency[key]);
-          //  Console.WriteLine($"\n{result}");
+            Console.WriteLine($"\n{result}");
 
-            list.Sort(new Comparison<Student>(AgeCompare));
-           // Console.WriteLine("Отсортируем студентов по возрасту: ");
-            foreach (var v in list) Console.WriteLine($"{v.firstName} {v.age}");
+            //list.Sort(new Comparison<Student>(AgeCompare));
+            //Console.WriteLine("Отсортируем студентов по возрасту: ");
+            //foreach (var v in list) Console.WriteLine($"{v.firstName} {v.age}");
 
-            list.Sort(new Comparison<Student>(CourceAndAgeCompare));
-           // Console.WriteLine("\nОтсортируем студентов по курсу и возрасту возрасту: ");
-            foreach (var v in list) Console.WriteLine($"{v.firstName}, курс {v.course}, возраст {v.age}");
+            //list.Sort(new Comparison<Student>(CourceAndAgeCompare));
+            //Console.WriteLine("\nОтсортируем студентов по курсу и возрасту возрасту: ");
+            //foreach (var v in list) Console.WriteLine($"{v.firstName}, курс {v.course}, возраст {v.age}");
 
-            Console.WriteLine(DateTime.Now - dt);
+            //Console.WriteLine(DateTime.Now - dt);
             Console.ReadKey();
         }
     }
