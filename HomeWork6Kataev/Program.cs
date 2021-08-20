@@ -10,7 +10,7 @@ namespace HomeWork6Kataev
         static void Main(string[] args)
         {
             StringBuilder sb = new StringBuilder();
-            for (int i = 0; i < 3; i++)
+            for (int i = 0; i < 1000; i++)
             {
                 sb.Append(Student.GetStudent());
             }
