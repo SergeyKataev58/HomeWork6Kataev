@@ -41,7 +41,9 @@ namespace Student
                     // Добавляем в список новый экземпляр класса Student
                     list.Add(new Student(s[0], s[1], s[2], s[3], int.Parse(s[4]), s[5], int.Parse(s[6]), int.Parse(s[7]), s[8]));
                     // Одновременно подсчитываем количество магистров пятого и шестого курсов
-                    if (int.Parse(s[6]) == 5) magistr5++; else if (int.Parse(s[6]) == 6) magistr6++;
+                    if (int.Parse(s[4]) == 5) magistr5++; 
+                    else 
+                    if (int.Parse(s[4]) == 6) magistr6++;
                     if (int.Parse(s[7]) > 17 && int.Parse(s[7]) < 21)
                     {
                         if (cousreFrequency.ContainsKey(int.Parse(s[6])))
@@ -68,14 +70,14 @@ namespace Student
             foreach (int key in keys)
                 result += String.Format("{0,-10} {1,-10:N0}\n",
                                    key, cousreFrequency[key]);
-            Console.WriteLine($"\n{result}");
+          //  Console.WriteLine($"\n{result}");
 
             list.Sort(new Comparison<Student>(AgeCompare));
-            Console.WriteLine("Отсортируем студентов по возрасту: ");
+           // Console.WriteLine("Отсортируем студентов по возрасту: ");
             foreach (var v in list) Console.WriteLine($"{v.firstName} {v.age}");
 
             list.Sort(new Comparison<Student>(CourceAndAgeCompare));
-            Console.WriteLine("\nОтсортируем студентов по курсу и возрасту возрасту: ");
+           // Console.WriteLine("\nОтсортируем студентов по курсу и возрасту возрасту: ");
             foreach (var v in list) Console.WriteLine($"{v.firstName}, курс {v.course}, возраст {v.age}");
 
             Console.WriteLine(DateTime.Now - dt);
